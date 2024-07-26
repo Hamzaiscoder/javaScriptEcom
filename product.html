@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaEcom</title>
+   
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        header{
+            background-color: rgb(239, 239, 239);
+        }
+    </style>
+</head>
+<body>
+    <header class="section-navbar">
+<div class="containerr navroad">
+    <div class="navbar_brand">
+        <a href="./index.html">
+        <img src="./public/images/icon-image.png" alt="">
+        </a>
+    </div>
+    <nav class="navabr">
+<ul>
+    <li class="nav-item">
+        <a href="./index.html" class="nav-link">Home</a>
+    </li>
+    <li class="nav-item">
+        <a href="./about.html" class="nav-link"> 
+About</a>
+    </li>
+    <li class="nav-item">
+        <a href="./product.html" class="nav-link
+        ">Product</a>
+    </li>
+    <li class="nav-item">
+        <a href="./contact.html" class="nav-link">Contact</a>
+    </li>
+    <li class="nav-item">
+        <a href="./addtocart.html" class="nav-link add-to-cart-btn" id="cartValue">
+            <i class="fa-solid fa-cart-shopping"> 0 </i>
+        </a>
+    </li>
+</ul>
+    </nav>
+</div>
+    </header>
+
+<!--Heo section start-->
+
+<section class="section-product">
+    <div class="container grid-three-cols">
+<div class="div-extra grid-two-cols">
+    <div class="div-text">
+        <p>new year sale</p>
+        <h3 class="head-three">Get and extra 50% off</h3>
+        <a href="#">Shop now</a>
+    </div>
+    <div class="div-image">
+        <img src="public/images/research.png" alt="">
+    </div>
+</div>
+<div class="div-extra grid-two-cols">
+    <div class="div-text">
+        <p>new year sale</p>
+        <h3 class="head-three">40% discount on spikkers</h3> 
+        <a href="#">Shop now</a>
+    </div>
+    <div class="div-image">
+        <img src="public/images/Coding.png" alt="">
+    </div>
+</div>
+<div class="div-extra grid-two-cols">
+    <div class="div-text">
+        <p>new year sale</p>
+        <h3 class="head-three">Get and extra 50% off</h3>
+        <a href="#">Shop now</a>
+    </div>
+    <div class="div-image">
+        <img src="public/images/hero.png" alt="">
+    </div>
+</div>
+    </div>
+    <div class="container grid-four-cols">
+        <div class="serv grid-two-cols">
+            <div class="ser-icon">
+                <i class="fa-solid fa-truck-fast"></i>
+            </div>
+            <div class="ser-text">Wrold wide shipping orders</div>
+     
+        </div>
+        <div class="serv grid-two-cols">
+            <div class="ser-icon">
+                <i class="fa-solid fa-rotate"></i>
+            </div>
+            <div class="ser-text">30 Days return back garenty</div>
+     
+        </div>
+        <div class="serv grid-two-cols">
+            <div class="ser-icon">
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+            </div>
+            <div class="ser-text">Money Back garenty within 14 Days</div>
+     
+        </div>
+        <div class="serv grid-two-cols">
+            <div class="ser-icon">
+                <i class="fa-solid fa-headphones-simple"></i>
+            </div>
+            <div class="ser-text">24 hours live support</div>
+     
+        </div>
+    </div>
+</section>
+<!--Dynamic cards-->
+<section class="section-dynamic-product">
+    <div class="container">
+        <h1 class="main-head">MY STORE!</h1>
+    </div>
+<section class="container">
+<div id="productContainer"></div>
+</section>
+
+</section>
+<!--Template-->
+<template id="productTemplate">
+    <div class="cards" id="cardValue">
+      <article class="information [card]">
+        <span class="category"></span>
+        <div class="imageContainer">
+          <img class="productImage" src="" alt="" />
+        </div>
+        <h2 class="productName"></h2>
+
+        <div class="productRating">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+
+        <p class="productDescription"></p>
+
+        <div class="productPriceElement">
+          <p class="productPrice"></p>
+          <p class="productActualPrice"></p>
+        </div>
+
+        <div class="productStockElement">
+          <p class="productProperty">Total Stocks Available:</p>
+          <p class="productStock"></p>
+        </div>
+
+        <div class="productQuantityElement">
+          <p class="productProperty">Quantity(Pieces)</p>
+          <div class="stockElement">
+            <button class="cartIncrement">+</button>
+            <p class="productQuantity">1</p>
+            <button class="cartDecrement">-</button>
+          </div>
+        </div>
+
+        <button class="add-to-cart-button">
+          <i class="fa-solid fa-cart-shopping"></i> Add To Cart
+        </button>
+      </article>
+    </div>
+  </template>
+
+<!--Dynamic cards-->
+
+     <!-- ================why choose us============== -->
+
+
+           <!-- ================why choose us============== -->
+    <!-- ========== Start footer Section ========== -->
+    <footer class="section-footer">
+        <div class="footer-container container">
+          <div class="content_1">
+            <img src="./public/images/log.png" alt="logo" />
+            <p>
+              Welcome to Thapa EcomStore, your ultimate destination for
+              cutting-edge gadgets!
+            </p>
+            <img src="https://i.postimg.cc/Nj9dgJ98/cards.png" alt="cards" />
+          </div>
+          <div class="content_2">
+            <h4>SHOPPING</h4>
+            <a href="#">Computer Store</a>
+            <a href="#">Laptop Store</a>
+            <a href="#">Accessories</a>
+            <a href="#">Sales & Discount</a>
+          </div>
+          <div class="content_3">
+            <h4>Experience</h4>
+            <a href="./contact.html">Contact Us</a>
+            <a href="" target="_blank">Payment Method</a>
+            <a href="" target="_blank">Delivery</a>
+            <a href="" target="_blank">Return and Exchange</a>
+          </div>
+          <div class="content_4">
+            <h4>NEWSLETTER</h4>
+            <p>Be the first to know about new<br />arrivals, sales & promos!</p>
+            <div class="f-mail">
+              <input type="email" placeholder="Your Email" />
+              <i class="bx bx-envelope"></i>
+            </div>
+            <hr />
+          </div>
+        </div>
+        <div class="f-design">
+          <div class="f-design-txt">
+            <p>Design and Code by Thapa Technical</p>
+          </div>
+        </div>
+      </footer>
+      <!-- ========== End footer Section ========== -->
+
+
+
+           <script type="module" src="./main.js"></script>
+           <script type="module" src="./homeProductCards.js"></script>
+           <!-- <script src="./showAddToCartCards.js"></script> -->
+</body>
+</html>
