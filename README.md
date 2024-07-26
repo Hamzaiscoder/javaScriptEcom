@@ -1,0 +1,1 @@
+A fully responsive e-commerce website developed using HTML, CSS, and JavaScript. It features a modern and clean design, showcasing products in a grid layout with detailed views for each product, including pricing and stock information. Users can add, remove, and update product quantities in the shopping cart, and proceed through a simple checkout process. 
